@@ -1,0 +1,92 @@
+import React, {Component} from 'react';
+import { Plataform, StyleSheet, Text, View, TextInput, Button} from "react-native";
+import CheckBox from 'react-native-check-box'
+
+
+
+class App extends Component{
+  render(){
+      return(
+          <View style={styles.container}>
+            <View style={{alignItems: 'center', margin: 3, padding: 10}}>
+              <Text style={{fontSize: 24,fontWeight: 'bold', color:"white"}}>MENSALIDADE</Text>
+            </View>
+            <View style={{alignItems: 'center', margin: 5, padding: 10}}>
+              <Text style={{fontWeight: 'bold', color:"#eef1ef"}}>Insira a placa do carro:</Text>
+            </View>
+            <View style={{alignItems: 'center', margin: 5, padding: 10}}>
+              <TextInput 
+                style={styles.input}
+                placeholder={'Placa'}
+                placeholderTextColor={'rgba(255,255,255,0.2)'}
+                ></TextInput> 
+            </View>
+            <View style={{alignItems: 'center', margin: 5, padding: 10}}>
+              <Text style={{fontWeight: 'bold', color:'#eef1ef'}}>Insira o modelo do carro:</Text>
+            </View>
+            <View style={{alignItems: 'center', margin: 5, padding: 10}}>
+            <TextInput 
+                style={styles.input}
+                placeholder={'Modelo'}
+                placeholderTextColor={'rgba(255,255,255,0.2)'}
+              ></TextInput>
+            </View><View style={{alignItems: 'center', margin: 5, padding: 10}}>
+              <Text style={{fontWeight: 'bold', color:"#eef1ef"}}>Caso deseje pagar com cartão, selecione uma opção:</Text>
+            </View>
+            <View style={{alignItems: 'center', margin: 5, padding: 10}}>
+              <Text style={{fontWeight: 'bold', color:"#eef1ef"}}>SELEÇÃO DE CARTÃO DE CRÉDITO</Text>
+            </View>
+            <View style={{alignItems: 'center', margin: 5, padding: 10}}>
+              <Button
+                title="Desejo Pagar com boleto!"
+                color="#fe5f55"
+                onPress={() => alert('Seu boleto será enviado automaticamente para seu E-mail cadastrado. Cheque sua caixa de entrada.')}
+                />
+                
+            </View>
+            <View style={{alignItems: 'center', margin: 5, padding: 10}}>
+              <Button
+                title="Cadastrar um novo cartão"
+                color="#B7443C"
+                onPress={() => alert('Envia para tela de cadastro de cartão.')}
+                />
+            </View>
+            <View style={{alignItems: 'center', margin: 5, padding: 10}}>
+              <Text style={{fontWeight: 'bold', color:"#eef1ef"}}>Selecione a data de cobrança:</Text>
+            </View>
+            <View style={{alignItems: 'center', margin: 5, padding: 10}}>
+              <Text style={{fontWeight: 'bold', color:"#eef1ef"}}>SELEÇÃO CHECKBOX</Text>
+            </View>
+            <View style={{alignItems: 'center', margin: 5, padding: 10}}>
+            <Button
+                title="Criar minha mensalidade!"
+                color="#fe5f55"
+                onPress={() => alert('Envia para tela de cadastro de cartão.')}
+                />
+            </View>
+
+          </View>
+      )
+  }
+}
+
+const styles = StyleSheet.create({
+  container:{
+    flex: 1,
+    backgroundColor: '#302f4d',
+  },
+
+  input:{
+    width: 300,
+    height: 45,
+    borderRadius: 20,
+    fontSize: 16,
+    paddingLeft: 20,
+    backgroundColor: 'rgba(94,101,114,0.45)',
+    color: '#eef1ef'
+  },
+
+
+});
+
+export default App;
